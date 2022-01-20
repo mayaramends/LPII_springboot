@@ -4,11 +4,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Convidado {
-    @Id //verificar formatacao
+    @Id
+    @NotEmpty
     private String rg;
+    @NotEmpty
     private String nomeconvidado;
 
     @ManyToOne
